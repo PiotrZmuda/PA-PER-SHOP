@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Rubik:wght@400;500;700&display=swap");
+
+button {
+  cursor: pointer;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Rubik, sans-serif;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #ff6939;
+}
+
+.main-container {
+  min-height: 100vh;
+  overflow: hidden;
+  max-width: 1920px;
+  height: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.right-section {
+  width: 100%;
+  max-width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 250px;
+}
+.right-section img:nth-child(2) {
+  position: absolute;
+  width: 269.94px;
+  height: 330.74px;
+}
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+  padding: 15px 32px;
+  min-width: 250px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.left-container {
+  position: relative;
+}
+.socia-media button {
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px solid #284642;
+  padding: 0px;
+  border-radius: 7px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  padding-left: 20px;
+  font-size: 23px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 66px;
+  border: 2px solid #edebf0;
+  border-radius: 7px;
+  display: flex;
+}
+input::placeholder {
+  font-size: 23px;
+}
+label {
+  color: #64606a;
+  size: 10px;
+  position: relative;
+  top: 9px;
+  left: 15px;
+  padding: 0px 7px;
+  background-color: white;
+}
+.action-button > button {
+  margin: 25px 0px 25px 0px;
+  width: 100%;
+  height: 69px;
+  background-color: #ff6939;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 30px;
+  border: none;
+  font-weight: 700;
+  font-size: 18px;
+}
+ 
+
+.validationError {
+  display: none;
+  font-size: 10px;
+  margin-top: 10px;
+  color: #ce0737;
+}
+
+.socia-media > div > button > img {
+  margin-right: 20px;
+}
+
+.visible {
+  display: block;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s;
+  border-right: 20px solid #ff6939;
+  border-bottom: 20px solid rgb(0, 0, 0, 0);
+  width: 0;
+  height: 0;
+}
+
+.tooltip::after {
+  content: "Opcja niedostępna";
+  position: absolute;
+  top: -45px;
+  left: -10px;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 7px;
+  width: 150px;
+  height: 40px;
+  background-color: #ff6939;
+  line-height: 40px;
+  color: #190f27;
+  cursor: context-menu;
+}
+.tooltip:hover::after,
+.tooltip:hover::before {
+  opacity: 1;
+}
+.blur {
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.notification {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -50px;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.notification a {
+  display: none;
+}
+
+.success {
+  background-color: #cfdbd9;
+  color: #284642;
+}
+.success::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  display: block;
+  width: 20%;
+  height: 40px;
+  background-color: #cfdbd9;
+}
+.format,
+.failed {
+  background-color: #f0eeed;
+  color: #ce0737;
+}
+.format::before,
+.failed::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  display: block;
+  width: 20%;
+  height: 40px;
+  background-color: #f0eeed;
+}
+
+.popup {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+}
+
+.showPopup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  /* display: block; */
+  position: relative;
+  animation: rotateX 1s infinite linear;
+  border: 10px solid #fff;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  animation: rotate 0.5s infinite linear reverse;
+  border: 10px solid #ff6939;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  animation: rotate 1s infinite linear;
+  border: 10px solid #fff;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.show {
+  opacity: 1;
+}
+.show a {
+  display: inline;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@media only screen and (max-width: 785px) {
+  .main-container {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  .right-section {
+    min-height: 261px;
+    width: 100%;
+    max-width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .right-section img:nth-child(2) {
+    margin: 50px;
+    width: 180px;
+    height: 240px;
+  }
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 32px;
+  }
+  .input-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .input-name > div:not(:last-child) {
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .right-section {
+    height: 38vh;
+  }
+  .right-section img:nth-child(2) {
+    margin: 40px;
+    width: 130px;
+    height: 180px;
+  }
+  .input-name {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-name > div:not(:last-child) {
+    margin-right: 0%;
+  }
+  .left-container > div:first-child {
+    margin: 20px 0px 20px 0px;
+  }
+}

@@ -1,0 +1,44 @@
+.right-section img:first-child {
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+}
+.divider {
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: #edebf0;
+}
+
+.divider-text {
+  margin: 0 10px;
+  color: black;
+  padding: 25px 0px;
+}
+.logout {
+  border-bottom: 3px solid #284642;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  color: #64606a;
+}
+.log-out {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.log-out > span {
+  font-weight: 500;
+  font-size: 24px;
+}

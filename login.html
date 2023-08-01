@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name = "description" content="Tutorial devstock">
+    <meta name = "keywords" content="project, html, tutorial, devstock">
+    <title>log-in</title>
+
+    <link rel="icon" type="image/x-icon" href="/images/webp/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style/global.css" />
+    <link rel="stylesheet" type="text/css" href="style/login.css" />
+
+
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="right-section">
+        <img src="./images/webp/image69.webp" alt="background" />
+        <img src="./images/webp/paper.webp" alt="pa_per.shop" />
+      </div>
+      <div class="left-section">
+        <div class="left-container">
+          <div class="notification success" id="success">Logowanie zakończona sukcesem</div>
+          <div class="notification failed" id="failed">Użytkownika nie istnieje lub błędne hasło! <a href="index.html">Zarejestruj się</a></div>
+          <div>Zaloguj się</div>
+          <div class="socia-media">
+            <div>
+              <button class="tooltip">
+                <img
+                  src="./images/webp/fb.webp"
+                  alt="logotyp-facebook"
+                />Rejestracja przez Facebook
+              </button>
+            </div>
+            <div>
+              <button class="tooltip">
+                <img src="./images/webp/insta.webp" alt="logotyp-instagram" />Rejestracja
+                przez Instagram
+              </button>
+            </div>
+          </div>
+          <div class="divider">
+            <span class="divider-text">Lub za pomocą maila</span>
+          </div>
+          <form id="form">
+            <div class="input-container">
+              <div>
+                <label>Email</label>
+                <input id="email" type="email" placeholder="Email Adress" />
+                <div id="emailError" class="validationError">
+                  To nie jest poprawny format adresu e-mail
+                </div>
+              </div>
+              <div>
+                <label>Password</label>
+                <input id="password" type="password" placeholder="Password" />
+                <div id="passwordError" class="validationError">
+                  Hasło musi mieć co najmniej 8 znaków, małą i wielką literę,
+                  cyfrę i znak specjalny
+                </div>
+              </div>
+            </div>
+
+            <div class="checkbox-wrapper">
+              <span>
+                <input type="checkbox" name="rememberCheckbox" id="rememberCheckbox"/>
+                <label for="rememberCheckbox">Zapamiętaj mnie</label>
+              </span>
+              <a href="password-recowery.html">Zapomniałem hasła</a>
+            </div>
+            <div class="action-button">
+              <button class="submit" type="submit">Zaloguj się</button>
+            </div>
+          </form>
+          <div class="divider"></div>
+          <div class="log-in">
+            Nie masz jeszcze konta?
+            <a href="index.html">Zarejestruj się</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup" class="popup">
+      <span class="loader"></span>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
