@@ -1,3 +1,15 @@
+
+body{
+  overflow: hidden;
+}
+.left-section {
+  display:block;
+  overflow: auto;
+  max-height: 100vh;
+  justify-content: center;
+  padding: 45px 32px;
+}
+
 .right-section img:first-child {
   height: 100%;
   width: 100%;
@@ -41,4 +53,10 @@
 .log-out > span {
   font-weight: 500;
   font-size: 24px;
+}
+
+@media only screen and (max-width: 785px) {
+  .left-section { 
+    max-height: 400px;
+}
 }
